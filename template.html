@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+    }
+
+    body {
+        height: 100vh;
+    }
+
+    main {
+        width: 85%;
+        margin: 0 auto;
+        padding: 1em;
+    }
+
+    h1,h2,h3,h4,h5,h6 {
+        display: block;
+        font-weight: bolder;
+        padding: 0.25em;
+        margin: 0.25em;
+    }
+
+    p {
+        padding: 0.5em;
+    }
+
+    ul, ol {
+        padding: 0.5em;
+    }
+
+    ul li, ol li {
+        padding: 0.25em;
+    }
+
+    p:has(img) {
+        max-width: 350px;
+        max-height: 250px;
+        overflow: hidden;
+        border-radius: 5px;
+        box-shadow: 2px 2px 5px #0d0d0d;
+        margin: 1em;
+    }
+
+    p img {
+        border-radius: inherit;
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+        transition: transform 0.1s ease;
+    }
+
+    p img:hover {
+        transform: scale(1.03);
+        transition: transform 0.1s ease;
+    }
+
+    p code, li code {
+        background: #e0e0e0;
+        font-family: monospace;
+        padding: 0.25em;
+        border-radius: 5px;
+    }
+
+    pre {
+        padding: 0.5em;
+        border-radius: 5px;
+        box-shadow: 2px 2px 5px #0d0d0d;
+    }
+
+    code {
+        background: #e0e0e0;
+        font-family: monospace;
+        border-radius: 5px;
+    }
+
+
+</style>
+<body>
+    <main>
+        {{ .HTML }}
+    </main>
+</body>
+</html>
