@@ -23,8 +23,7 @@ type Output struct {
 func main() {
 	args := os.Args[1:]
 
-	i := args[0]
-	o := args[1]
+	i, o := args[0], args[1]
 
 	if _, err := os.Stat(i); os.IsNotExist(err) {
 		fmt.Println("file does not exist")
@@ -74,5 +73,4 @@ func main() {
 		fmt.Println(err.Error())
 		os.Exit(1)
 	}
-
 }
